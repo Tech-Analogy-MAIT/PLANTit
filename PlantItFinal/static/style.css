@@ -1,0 +1,263 @@
+* {
+    font-family: 'Roboto Slab', serif;
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+
+:root {
+    --bg-color: #80e449;
+    --primary-color: #a320a5;
+    --secondary-color: #181818;
+}
+
+*::selection {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+body {
+    color: var(--secondary-color);
+    background-color: var(--bg-color);
+}
+
+#strip1 {
+    position:sticky;
+    top: 0px;
+    background-color: var(--bg-color);
+    height: 50px;
+}
+
+#strip2 {
+    background: url('bg.jpg');
+    background-repeat: no-repeat;
+    background-size: 94em;
+    
+}
+
+.heading {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#mainHeading {
+    margin-left: 100px;
+    font-size: 125px;
+}
+
+#motto {
+    margin-left: 100px;
+    font-size: 32px;
+}
+
+#mainPara {
+    margin: 50px;
+    margin-right: 550px;
+    margin-left: 100px;
+}
+
+#logo {
+    height: 50px;
+    margin-left: 30px;
+    position: fixed;
+}
+
+#mainName {
+    font-family: 'Merriweather', serif;
+    color: var(--secondary-color);
+}
+
+p {
+    color: var(--primary-color);
+}
+
+#mainName:hover {
+    color: var(--secondary-color);
+    position: relative;
+    top: 1px;
+}
+
+.centred {
+    text-align: center;
+}
+
+nav {
+    text-align: right;
+}
+
+.navButton {
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    padding: 7px;
+    width: 100px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    color: var(--secondary-color);
+
+}
+
+.navButton:hover {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+#mainImage {
+    float: right;
+    height: 300px;
+    width: 300px;
+    border-radius: 40px;
+    display: block;
+    margin-left: auto;
+    margin-right: 100px;
+}
+
+#plantitButton {
+    background-color: var(--secondary-color);
+    padding: 7px;
+    padding-left: 23px;
+    padding-right: 23px;
+    width: 100px;
+    margin: 3px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    color: var(--primary-color);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#plantitButton:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+#navPlantitButton {
+    background-color: var(--secondary-color);
+    padding: 7px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin: 3px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    color: var(--primary-color);
+
+
+}
+
+#navPlantitButton:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.text:hover {
+    color: var(--primary-color);
+
+}
+
+#intro {
+    text-align: justify;
+}
+
+#goToTop {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+
+
+}
+
+#logoDown {
+    width: 190px;
+
+}
+
+#footerMenu {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-areas:
+        'footerAbove footerAbove footerAbove'
+        'footerLeft footerMid footerRight'
+        'footerBottom footerBottom footerBottom';
+}
+
+#footerAbove {
+    grid-area: footerAbove;
+}
+
+#footerLeft {
+    grid-area: footerLeft;
+}
+
+#footerRight {
+    grid-area: footerRight;
+}
+
+#footerBottom {
+    grid-area: footerBottom;
+}
+
+#footerMid {
+    grid-area: footerMid;
+    display: grid;
+    grid-template-areas: 
+    'socialhead socialhead'
+    'gmail instagram'
+    'github linkedin';
+}
+
+#socialhead {
+    grid-area: socialhead;
+}
+
+#linkedin {
+    display: inline;
+    grid-area: linkedin;
+}
+
+#instagram {
+    display: inline;
+    grid-area: instagram;
+}
+
+#gmail {
+    display: inline;
+    grid-area: gmail;
+}
+
+#github {
+    display: inline;
+    grid-area: github;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+
+.item {
+    width: 595px;
+    height: 350px;
+    border: 2px solid var(--primary-color);
+    margin: 50px;
+
+}

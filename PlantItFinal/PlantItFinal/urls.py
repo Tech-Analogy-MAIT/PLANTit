@@ -1,4 +1,4 @@
-"""Hello URL Configuration
+"""PlantItFinal URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.1/topics/http/urls/
@@ -20,3 +20,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('home.urls'))
 ]
+
+admin.site.site_header = "PLANTit Admin"
+admin.site.site_title = "PLANTit Admin Portal"
+admin.site.index_title = "Welcome to PLANTit Portal"
