@@ -1,0 +1,151 @@
+* {
+    font-family: 'Roboto Slab', serif;
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+
+body {
+    background-color:#bef199; 
+    color: #323911;
+}   
+
+
+#mainHeading {
+    margin-left: 100px;
+    font-size: 150px;
+}
+
+#motto {
+    margin: 10px;
+    font-size: 32px;
+}
+
+#mainPara {
+
+    
+    margin: 100px;
+}
+
+#logo {
+    height:50px;
+    margin-left: 30px;
+    position: fixed;
+}
+
+#mainName {
+    font-family: 'Merriweather', serif;
+    color:#67508f;
+}
+
+#mainName:hover {
+    color: #391c11;
+    position: relative;
+    top: 1px;
+}
+
+.centred {
+    text-align: center;
+}
+
+nav {
+    text-align: right;
+}
+
+.navButton {
+    background-color: #67508f;
+    border-radius: 10px;
+    padding: 7px;
+    width: 100px; 
+    margin: 10px; 
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    color: #391c11;
+
+}
+
+.navButton:hover {
+    color: #67508f;
+    background-color: #391c11;
+    text-decoration: none;
+}
+
+a{
+    text-decoration: none;
+    color: #67508f;
+}
+
+a:hover {
+    color: #391c11;
+    text-decoration: underline;
+}
+
+#mainImage {
+    float: right;
+    height: 300px;
+    width: 300px;
+    border-radius: 40px;
+    display: block;
+    margin-left: auto;
+    margin-right: 100px;
+}
+
+#plantitButton {
+    background-color: #391c11;
+    padding: 7px;
+    width: 100px; 
+    margin: 3px; 
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    color: #67508f;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#plantitButton:hover {
+    background-color: #67508f;
+    color: #391c11;
+    text-decoration: none;
+}
+
+#navPlantitButton {
+    background-color: #391c11;
+    padding: 7px;
+    padding-left: 40px;
+    padding-right: 40px; 
+    margin: 3px; 
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    color: #67508f;
+    
+   
+}
+
+#navPlantitButton:hover {
+    background-color: #67508f;
+    color: #391c11;
+    text-decoration: none;
+}
+
+.text:hover {
+    color: #67508f;
+
+}
+
+#intro {
+    text-align: justify;
+}
+
+#goToTop {
+    position:fixed;
+    bottom: 10px;
+    right: 10px;
+
+    
+}
