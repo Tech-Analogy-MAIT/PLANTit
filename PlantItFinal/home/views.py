@@ -1,5 +1,5 @@
 from django.shortcuts import render, HttpResponse
-from home.models import Contact
+from home.models import Contact,Plant
 from django.contrib import messages
 
 # Create your views here.
@@ -22,4 +22,6 @@ def contact(request) :
 def social(request) :
     return render(request, 'social.html')
 def plantfinder(request) :
-    return render(request, 'plantfinder.html')
+    plants = Plant.objects.all()
+    params={'plant': plants}
+    return render(request, 'plantfinder.html', params)

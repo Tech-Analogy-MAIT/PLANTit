@@ -25,7 +25,7 @@
 </head>
 
 <body>
-
+    {% comment %} <h2> {{plants.0.plant_name}} </h2> {% endcomment %}
     <div id="strip1">
 
         <header>
@@ -54,6 +54,7 @@
     <div class="heading centred" id="portfolioHeading-1" >
         <h1>Evergreen Plants</h1> <strong>grow all year</strong> 
         <div class="container">
+            {% comment %} {{plants.0.plant_name}} {% endcomment %}
             <a href="" class="item">{% load static %}<img src="" alt="">e-1</a>
             <a href="" class="item">{% load static %}<img src="" alt="">e-2</a>
             <a href="" class="item">{% load static %}<img src="" alt="">e-3</a>
