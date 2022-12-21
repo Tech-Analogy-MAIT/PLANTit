@@ -10,6 +10,7 @@ class Contact(models.Model):
         return self.name
     
 class Plant(models.Model) :
+    plant_id=models.CharField(max_length=2,default='')
     plant_name=models.CharField(max_length=40)
     plant_pic=models.ImageField(upload_to='media/')   #upload_to='/static/media'
     season=models.CharField(max_length=200)

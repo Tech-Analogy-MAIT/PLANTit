@@ -1,6 +1,7 @@
 from django.shortcuts import render, HttpResponse
 from home.models import Contact,Plant
 from django.contrib import messages
+from .models import Plant
 
 # Create your views here.
 def index(request) :
@@ -22,6 +23,15 @@ def contact(request) :
 def social(request) :
     return render(request, 'social.html')
 def plantfinder(request) :
-    plants = Plant.objects.all()
-    params={'plant': plants}
-    return render(request, 'plantfinder.html', params)
+    #allplants = Plant.objects.all()
+    #params={'allplants': allplants}
+    #n=len(plants)
+    
+    return render(request, 'plantfinder.html', {'plants': Plant.objects.all()})
+
+def search(request) :
+    plant=request.GET.get('query')
+    print("eefhefhe")
+    print(plant)
+    print("cvehbjn")
+    return render(request,'search.html', {'plants': Plant.objects.filter(plant_name__icontains=plant)})

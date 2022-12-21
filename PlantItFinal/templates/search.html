@@ -25,6 +25,7 @@
 </head>
 
 <body>
+    {% comment %} <h2> {{plants.0.plant_name}} </h2> {% endcomment %}
     <div id="strip1">
 
         <header>
@@ -50,26 +51,27 @@
 
     </div>
 
-    <form name="search" method="get" action="/search/">
-        {% csrf_token %}
-        <input type="search" placeholder="Search" name="query" id="search">
-        <button type="submit">Search</button>
-    </form>
-
     <div class="heading centred" id="portfolioHeading-1" >
         <h1>Evergreen Plants</h1> <strong>grow all year</strong> 
         <div class="container">
             {%for i in plants%}
-                <p> {{i.plant_name}} </p> <br>
-                {% comment %} {{i.plant_pic.url}} {% endcomment %}
+                <p> {{i.plant_name}} </p>
+                {{i.plant_pic.url}}
                 <img src="{{i.plant_pic.url}}">
-                {{i.season}} <br>
-                {{i.soil}} <br>
-                {{i.location}} <br>
-                {{i.cost}} <br>
             {% endfor %}
-            {% comment %} <a href="" class="item">{% load static %}<img src="" alt="">e-1</a> {% endcomment %}
-            
+
+            {% comment %} <a href="" class="item">{% load static %}<img src="" alt="">e-1</a>
+            <a href="" class="item">{% load static %}<img src="" alt="">e-2</a>
+            <a href="" class="item">{% load static %}<img src="" alt="">e-3</a>
+            <a href="" class="item">{% load static %}<img src="" alt="">e-4</a>
+            <a href="" class="item">{% load static %}<img src="" alt="">e-5</a>
+            <a href="" class="item">{% load static %}<img src="" alt="">e-6</a>
+            <a href="" class="item">{% load static %}<img src="" alt="">e-7</a>
+            <a href="" class="item">{% load static %}<img src="" alt="">e-8</a>
+            <a href="" class="item">{% load static %}<img src="" alt="">e-9</a>
+            <a href="" class="item">{% load static %}<img src="" alt="">e-10</a>
+            <a href="" class="item">{% load static %}<img src="" alt="">e-11</a>
+            <a href="" class="item">{% load static %}<img src="" alt="">e-12</a> {% endcomment %}
         </div>
 
     </div>
@@ -77,8 +79,18 @@
     <div class="heading centred" id="portfolioHeading-2">
         <h1>Season plants</h1> <strong>grow some season</strong> 
         <div class="container">
-            {% comment %} <a href="" class="item">{% load static %}<img src="" alt="">e-1</a> {% endcomment %}
-            
+            {% comment %} <a href="" class="item">{% load static %}<img src="" alt="">e-1</a>
+            <a href="" class="item">{% load static %}<img src="" alt="">e-2</a>
+            <a href="" class="item">{% load static %}<img src="" alt="">e-3</a>
+            <a href="" class="item">{% load static %}<img src="" alt="">e-4</a>
+            <a href="" class="item">{% load static %}<img src="" alt="">e-5</a>
+            <a href="" class="item">{% load static %}<img src="" alt="">e-6</a>
+            <a href="" class="item">{% load static %}<img src="" alt="">e-7</a>
+            <a href="" class="item">{% load static %}<img src="" alt="">e-8</a>
+            <a href="" class="item">{% load static %}<img src="" alt="">e-9</a>
+            <a href="" class="item">{% load static %}<img src="" alt="">e-10</a>
+            <a href="" class="item">{% load static %}<img src="" alt="">e-11</a>
+            <a href="" class="item">{% load static %}<img src="" alt="">e-12</a> {% endcomment %}
         </div>
     </div>
 
@@ -192,8 +204,7 @@
 
 
 
-    </footer>
-
+    
 
 </body>
 

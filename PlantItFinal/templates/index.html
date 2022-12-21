@@ -13,15 +13,20 @@
     <meta name="keywords" content="plantit, PLANTIT, PLANTit, PLANandPLANT, Plan&Plant">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Roboto+Slab&display=swap"
         rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Chivo+Mono&display=swap');
+    </style>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Roboto+Slab&display=swap');
     </style>
     <script src="action.js"></script>
     <!--    font-family: 'Merriweather', serif;
             font-family: 'Montserrat', sans-serif;
-            font-family: 'Roboto Slab', serif;      -->
+            font-family: 'Roboto Slab', serif; 
+            font-family: 'Chivo Mono', monospace;     -->
 </head>
 
 <body>
@@ -46,10 +51,10 @@
             <nav>
 
                 <a class="navButton" href="/index">Home</a>
-                <a class="navButton" href="#mailingList">SERVICES</a>
+                <a class="navButton" href="#strip3">SERVICES</a>
                 <a class="navButton" href="/plantfinder">PLANT A TREE</a>
-                <a class="navButton" href="/plantfinder">PLANT FINDER</a>
-                <a class="navButton" href="/contact">CONTACT</a>
+                <a class="navButton" href="#strip7">COMMUNITY</a>
+                <a class="navButton" href="#contactstrip">CONTACT</a>
                 <a id="navLoginButton" href="#mailingList">SUBSCRIBE</a>
                 <a id="navLoginButton" href="backend.php">LOG IN</a>
 
@@ -67,7 +72,7 @@
                 {% load static %} <img src="{% static "/media/plant1.jpg" %}" alt="img">
 
             </div>
-            <h1><strong id="mainHeading" class="text">PLANTit</strong> <br>
+            <h1><strong id="mainHeading" class="text">PLANTit</strong>
             </h1>
             <h2 id="motto">
                 <strong class="text">PLAN</strong> <strong class="text">&</strong> <strong class="text">PLANT</strong>
@@ -85,61 +90,105 @@
         <div>
             <a id="plantitButton" href="#strip3">GET STARTED</a>
             <a id="plantitButton" href="">PLANT A TREE</a>
-            <a id="plantitButton" href="">PLANT FINDER</a>
+            <a id="plantitButton" href="/plantfinder">PLANT FINDER</a>
         </div>
+        <br>
 
     </div>
-    <br><br><br>
+
 
     <div id="strip3" class="centred">
-        <h1>
+        <br><br>
+        <h1 class="stripHeading centred">
             OUR SERVICES :
         </h1>
-        <h2>Let's Get Started</h2>
+        <h2 class="stripSubHeading centred">Let's Get Started</h2>
         <div class="container">
             <div class="item"><a href=""></a>
-                {% load static %}<img class="fleximg" src="{% static "/media/custom (1).jpg" %}" alt="1">PLANTATION GUIDE
+                {% load static %}<img class="fleximg" src="{% static "/media/custom (1).jpg" %}" alt="1">PLANTATION
+                GUIDE
             </div>
             <div class="item">
-                {% load static %}<img src="{% static "/media/custom (2).jpg" %}" alt="2">PLANT A TREE IN YOUR LOCATION
+                {% load static %}<img class="fleximg" src="{% static "/media/custom (2).jpg" %}" alt="2">PLANT A TREE
+                IN YOUR LOCATION
             </div>
             <div class="item">
-                {% load static %}<img src="{% static "/media/custom (3).jpg" %}" alt="3">FIND THE RIGHT PLANT
+                {% load static %}<img class="fleximg" src="{% static "/media/custom (3).jpg" %}" alt="3">FIND THE RIGHT
+                PLANT
             </div>
             <div class="item">
-                {% load static %}<img src="{% static "/media/custom (4).jpg" %}" alt="4">CHAT WITH COMMUNITY
+                {% load static %}<img class="fleximg" src="{% static "/media/custom (4).jpg" %}" alt="4">CHAT WITH
+                COMMUNITY
             </div>
 
         </div>
     </div>
 
     <div id="strip4">
-        <h1>PLANTATION GUIDE</h1>
-        
+        <br><br>
+        <h1 class="stripHeading centred">
+            PLANTATION GUIDE
+        </h1>
+        <img src="timeline" alt="timeline">
 
     </div>
 
     <div id="strip5">
-        <h1>
+        <br><br>
+        <h1 class="stripHeading centred">
             PLANT A TREE IN YOUR LOCATION
         </h1>
+        <div class="centred">
+            <input class="searchbar" type="text" placeholder="Enter your Location">
+            <div class="dropdown">
+                <button class="dropbtn">Location</button>
+                <div class="dropdown-content">
+                    <a href="#">North Delhi</a>
+                    <a href="#">South Delhi</a>
+                    <a href="#">East Delhi</a>
+                    <a href="#">West Delhi</a>
+
+                </div>
+            </div>
+            <div>
+                <input id="inputbtnml" class="btn" type="submit" value="Search">
+            </div>
+        </div>
     </div>
 
     <div id="strip6">
-        <h1>
+        <br><br>
+        <h1 class="stripHeading centred">
             FIND THE RIGHT PLANT
         </h1>
+        <div class="centred">
+            <input class="searchbar" type="text" placeholder="Enter your requirements">
+            <div>
+                <input id="inputbtnml" class="btn" type="submit" value="Search">
+            </div>
+        </div>
     </div>
+    
 
     <div id="strip7">
-        <h1>
+        <br><br>
+        <h1 class="stripHeading centred">
             CHAT WITH COMMUNITY
         </h1>
+        <h2 class="stripSubHeading centred">
+            Find people with similar interests of different backgrounds and start talking. All enthusiasts are welcome
+            to join community.
+
+        </h2>
+        <iframe src="https://discord.com/widget?id=1055149197000712222&theme=dark" width="1502" height="500"
+            allowtransparency="true" frameborder="0"
+            sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
     </div>
 
-    <div id="mailingList" class="centred" style="font-size: 30px;" >
-        <h1>Join Our Newsletter</h1>
-        <p>Get onto our mailing list to get to know the latest places to plant a tree.</p>
+    <div id="mailingList" class="centred" style="font-size: 30px;">
+        <br><br>
+        <h1 class="stripHeading centred">Join Our Newsletter</h1>
+        <p class="stripSubHeading centred">Get onto our mailing list to get to know the latest places to plant a tree.</p>
         <div>
             <input id="inputtextml" type="text" placeholder="Enter your E-mail">
             <div>
@@ -149,9 +198,10 @@
     </div>
 
     <div id="contactstrip">
-        <h1 class="heading centred" style="font-size: 100px;">Contact Us</h1>
-        <div id="contactForm" class="centred" style="font-weight: bold;font-size: 25px;">
-            <h2 style="font-size: 40px;">Doubts? <br>
+        <br><br>
+        <h1 class="stripHeading centred">Contact Us</h1>
+        <div id="contactForm" class="centred" style="font-weight: bold;font-size: 20px;">
+            <h2 class="stripSubHeading centred">Doubts? <br>
                 Fill in the form below and we will reach out to you.</h2>
             <form method="post" action="/contact/">
                 {% csrf_token %}
