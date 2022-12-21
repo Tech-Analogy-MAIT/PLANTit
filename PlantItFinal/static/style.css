@@ -6,25 +6,27 @@
 
 :root {
     --bg-color: #80e449;
-    --primary-color: #a320a5;
-    --secondary-color: #181818;
+    --primary-color: rgb(11, 29, 33);
+    --secondary-color: #f182f1;
+    --tertiary-color: #ca8639;
+    --text-color:#181818;
 }
 
 *::selection {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
+    background-color: var(--tertiary-color);
+    color: black;
 }
 
 body {
-    color: var(--secondary-color);
-    background-color: var(--bg-color);
+    color: var(--text-color);
+    background-color: #b2f38f;
 }
 
 #strip1 {
     position:sticky;
     top: 0px;
     background-color: var(--bg-color);
-    height: 50px;
+    height: 60px;
 }
 
 #strip2 {
@@ -32,6 +34,18 @@ body {
     background-repeat: no-repeat;
     background-size: 94em;
     
+}
+
+#strip3 {
+    background-color: aliceblue;
+}
+
+#strip5 {
+    background-color: aliceblue;
+}
+
+#strip7 {
+    background-color: aliceblue;
 }
 
 .heading {
@@ -52,6 +66,7 @@ body {
     margin: 50px;
     margin-right: 550px;
     margin-left: 100px;
+    font-size: 32px;
 }
 
 #logo {
@@ -65,14 +80,11 @@ body {
     color: var(--secondary-color);
 }
 
-p {
-    color: var(--primary-color);
-}
-
-#mainName:hover {
-    color: var(--secondary-color);
-    position: relative;
-    top: 1px;
+#mainImage {
+    display: inline;
+    float: right;
+    width: 100px;
+    margin-right: 50px;
 }
 
 .centred {
@@ -84,22 +96,22 @@ nav {
 }
 
 .navButton {
-    background-color: var(--primary-color);
+    color: var(--primary-color);
     border-radius: 10px;
     padding: 7px;
     width: 100px;
     margin: 10px;
-    border: none;
+    border: 2px solid var(--primary-color);
     cursor: pointer;
     font-weight: bold;
     text-align: center;
-    color: var(--secondary-color);
+    
 
 }
 
 .navButton:hover {
-    color: var(--primary-color);
-    background-color: var(--secondary-color);
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
     text-decoration: none;
 }
 
@@ -124,20 +136,19 @@ a:hover {
 }
 
 #plantitButton {
-    background-color: var(--secondary-color);
     padding: 7px;
     padding-left: 23px;
     padding-right: 23px;
     width: 100px;
     margin: 3px;
-    border: none;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
     cursor: pointer;
     font-weight: bold;
     text-align: center;
     color: var(--primary-color);
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    display: inline-block;
+    margin-left: 200px;
 }
 
 #plantitButton:hover {
@@ -146,7 +157,7 @@ a:hover {
     text-decoration: none;
 }
 
-#navPlantitButton {
+#navLoginButton {
     background-color: var(--secondary-color);
     padding: 7px;
     padding-left: 40px;
@@ -161,7 +172,7 @@ a:hover {
 
 }
 
-#navPlantitButton:hover {
+#navLoginButton:hover {
     background-color: var(--primary-color);
     color: var(--secondary-color);
     text-decoration: none;
@@ -256,8 +267,50 @@ a:hover {
 
 .item {
     width: 595px;
-    height: 350px;
+    height: 300px;
     border: 2px solid var(--primary-color);
     margin: 50px;
+    font-size: 20px;
 
+}
+
+.item:hover {
+    width: 625px;
+    height: 330px;
+    font-size: 36px;
+}
+
+.fleximg {
+    width: 575px;
+    height: 280px;
+}
+
+.fleximg:hover {
+    width: 605px;
+    height: 310px;
+}
+
+#inputtextml {
+    display: inline;
+    background-color:var(--secondary-color);
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 5px;
+
+}
+
+#inputbtnml {
+    background-color: #a320a5;
+    color: black;
+    font-size:15px;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 7px;
+    margin: 20px;
+    display: inline;
+}
+
+.messagesent {
+    background-color: red;
 }

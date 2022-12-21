@@ -1,5 +1,6 @@
 from django.shortcuts import render, HttpResponse
 from home.models import Contact
+from django.contrib import messages
 
 # Create your views here.
 def index(request) :
@@ -16,6 +17,7 @@ def contact(request) :
         message = request.POST.get('message')
         contact = Contact(name=name, email=email, phone=phone, message=message)
         contact.save()
+        messages.success(request,'Thank You! Your message has been sent.')
     return render(request, 'contact.html')
 def social(request) :
     return render(request, 'social.html')

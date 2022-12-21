@@ -26,12 +26,21 @@
 
 <body>
 
+    {% if messages %}
+    {% for message in messages %}
+    <div class="messagesent" id="messagesent" role="alert">
+        <strong> {{message}} </strong>
+    </div>
+    {% endfor %}
+    {% endif %}
+
+
     <div id="strip1">
 
         <header>
             <div>
                 <a href="/index">
-                    {% load static %} <img id="logo" src="{% static " /media/logo.jpg" %}" alt="PLANTit">
+                    {% load static %} <img id="logo" src="{% static "/media/logo.jpg" %}" alt="PLANTit">
                 </a>
             </div>
             <br>
@@ -259,7 +268,7 @@
         </div>
 
         <div id="goToTop">
-            <a href="/index">{% load static %}<img src="{% static " /media/uparrow.png" %}" alt="TOP"
+            <a href="/index">{% load static %}<img src="{% static "/media/uparrow.png" %}" alt="TOP"
                     style="width:40px;"></a>
         </div>
 

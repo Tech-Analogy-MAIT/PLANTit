@@ -26,6 +26,14 @@
 
 <body>
 
+    {% if messages %}
+    {% for message in messages %}
+    <div class="messagesent" id="messagesent" role="alert">
+        <strong> {{message}} </strong>
+    </div>
+    {% endfor %}
+    {% endif %}
+
     <div id="strip1">
 
         <header>
@@ -38,10 +46,12 @@
             <nav>
 
                 <a class="navButton" href="/index">Home</a>
-                <a class="navButton" href="/about">ABOUT</a>
-                <a class="navButton" href="/plantfinder">PLANT FINDEr</a>
+                <a class="navButton" href="#mailingList">SERVICES</a>
+                <a class="navButton" href="/plantfinder">PLANT A TREE</a>
+                <a class="navButton" href="/plantfinder">PLANT FINDER</a>
                 <a class="navButton" href="/contact">CONTACT</a>
-                <a id="navPlantitButton" href="backend.php">Plant It</a>
+                <a id="navLoginButton" href="#mailingList">SUBSCRIBE</a>
+                <a id="navLoginButton" href="backend.php">LOG IN</a>
 
             </nav>
 
@@ -53,6 +63,10 @@
 
     <div id="strip2">
         <div>
+            <div id="mainImage">
+                {% load static %} <img src="{% static "/media/plant1.jpg" %}" alt="img">
+
+            </div>
             <h1><strong id="mainHeading" class="text">PLANTit</strong> <br>
             </h1>
             <h2 id="motto">
@@ -62,59 +76,122 @@
 
 
         <div id="mainPara">
-            <p class="centred">Creating a One Stop Solution which will
-                guide you throughout your journey of
-                parenting a plant.
-                Providing a platform where we can get all
-                the ecological information we need.
-                Giving all the enthusiasts a common
-                ground to communicate as well as
-                support each other.
-                A one-stop web platform where an induvidual can recieve all the help they need
-                regarding plantations customized to their location.
-                The user can customize their search according to their need and demand for the plant
-                including soil specific plants, indoor/outdoor plants, with/without edible resource, etc.
-                The users will also be provided with a discussion platform in order to connect with
-                fellow enthusiasts as well as proffessionals in the field.
+            <p class="centred">A one-stop solution for every environmental enthusiast to guide you throughout your
+                journey of parenting a plant according to the ecological conditions in your surrounding customized to
+                location and also providing with a common ground to communicate as well as support each other.
             </p>
-        </div>
-        <div>
-            <a id="plantitButton" href="sankalptaru.com">PLANTit!</a>
         </div>
 
         <div>
-            <p  style="margin-left: 100px;margin-right: 400px;">
-                Chat with the community Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Totam
-                animi perferendis enim. Ex, eius eaque nam minus unde minima. Sed dignissimos, itaque voluptates
-                corrupti explicabo ab veniam voluptate quasi porro, maiores incidunt, distinctio ea hic!
-                Repellat, eos
-                nulla at unde voluptate ab commodi deleniti aliquam velit sint saepe enim recusandae?
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi officiis nobis reiciendis dolorem eum
-                expedita dolore tempora fugiat nemo inventore sed beatae deserunt, error, quisquam accusantium aut
-                doloremque suscipit eius, sequi commodi? Culpa quae assumenda cum id. Obcaecati, sint doloribus.
-                Adipisci deleniti itaque assumenda
-                
-            </p>
+            <a id="plantitButton" href="#strip3">GET STARTED</a>
+            <a id="plantitButton" href="">PLANT A TREE</a>
+            <a id="plantitButton" href="">PLANT FINDER</a>
         </div>
+
     </div>
     <br><br><br>
 
-    <div class="centred" style="font-size: 30px;">
+    <div id="strip3" class="centred">
+        <h1>
+            OUR SERVICES :
+        </h1>
+        <h2>Let's Get Started</h2>
+        <div class="container">
+            <div class="item"><a href=""></a>
+                {% load static %}<img class="fleximg" src="{% static "/media/custom (1).jpg" %}" alt="1">PLANTATION GUIDE
+            </div>
+            <div class="item">
+                {% load static %}<img src="{% static "/media/custom (2).jpg" %}" alt="2">PLANT A TREE IN YOUR LOCATION
+            </div>
+            <div class="item">
+                {% load static %}<img src="{% static "/media/custom (3).jpg" %}" alt="3">FIND THE RIGHT PLANT
+            </div>
+            <div class="item">
+                {% load static %}<img src="{% static "/media/custom (4).jpg" %}" alt="4">CHAT WITH COMMUNITY
+            </div>
+
+        </div>
+    </div>
+
+    <div id="strip4">
+        <h1>PLANTATION GUIDE</h1>
+        
+
+    </div>
+
+    <div id="strip5">
+        <h1>
+            PLANT A TREE IN YOUR LOCATION
+        </h1>
+    </div>
+
+    <div id="strip6">
+        <h1>
+            FIND THE RIGHT PLANT
+        </h1>
+    </div>
+
+    <div id="strip7">
+        <h1>
+            CHAT WITH COMMUNITY
+        </h1>
+    </div>
+
+    <div id="mailingList" class="centred" style="font-size: 30px;" >
         <h1>Join Our Newsletter</h1>
         <p>Get onto our mailing list to get to know the latest places to plant a tree.</p>
         <div>
-            <input type="text" class="form-control" placeholder="Enter your E-mail"
-                style="background-color:#c29dc3;font-weight: bold;font-size: 20px;border-radius: 10px;padding: 5px;">
-            <div class="input-group-append">
-                <input class="btn" type="submit" value="SUBSCRIBE"
-                    style="background-color: #a320a5;color: black;font-size:15px;font-weight: bold;border-radius: 10px;padding: 7px;margin: 20px;">
+            <input id="inputtextml" type="text" placeholder="Enter your E-mail">
+            <div>
+                <input id="inputbtnml" class="btn" type="submit" value="SUBSCRIBE">
             </div>
         </div>
     </div>
 
-   
-   
+    <div id="contactstrip">
+        <h1 class="heading centred" style="font-size: 100px;">Contact Us</h1>
+        <div id="contactForm" class="centred" style="font-weight: bold;font-size: 25px;">
+            <h2 style="font-size: 40px;">Doubts? <br>
+                Fill in the form below and we will reach out to you.</h2>
+            <form method="post" action="/contact/">
+                {% csrf_token %}
+                <div>
+                    Name: <input type="text" name="name" id=""
+                        style="background-color:#c29dc3;font-weight: bold;font-size: 20px;border-radius: 10px;padding: 5px;"
+                        placeholder="Enter your Name">
+                </div>
+                <br>
+                <div>
+                    E-mail: <input type="email" name="email" id=""
+                        style="background-color:#c29dc3;font-weight: bold;font-size: 20px;border-radius: 10px;padding: 5px;"
+                        placeholder="Enter your E-mail">
+                </div>
+                <br>
+                <div>
+                    Phone: <input type="number" name="phone" id=""
+                        style="background-color:#c29dc3;font-weight: bold;font-size: 20px;border-radius: 10px;padding: 5px;"
+                        placeholder="Enter Phone No.">
+                </div>
+                <br>
+                <div>
+                    Message: <input type="text" name="message" id=""
+                        style="background-color:#c29dc3;font-weight: bold;font-size: 20px;border-radius: 10px;padding: 5px;"
+                        placeholder="Enter Message">
+                </div>
+                <br>
+                <div>
+                    <input type="checkbox" name="" id="contactcheckbox" checked>
+                    <label for="contactcheckbox">You agree to be reached upon recieving of this form.</label>
+                    <br>
+                    <input class="btn" type="submit" value="SUBMIT"
+                        style="background-color: #a320a5;color: black;font-size:15px;font-weight: bold;border-radius: 10px;padding: 7px;margin: 20px;">
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
     <hr>
 
     <footer id="footerMenu" class="centred">
@@ -206,7 +283,7 @@
                             d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
                     </svg>
                 </div>
-            </a>           
+            </a>
 
         </div>
 
@@ -219,7 +296,8 @@
         </div>
 
         <div id="goToTop">
-            <a href="/index">{% load static %}<img src="{% static "/media/uparrow.png" %}" alt="TOP" style="width:40px;"></a>
+            <a href="/index">{% load static %}<img src="{% static "/media/uparrow.png" %}" alt="TOP"
+                    style="width:40px;"></a>
         </div>
 
 
