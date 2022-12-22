@@ -56,8 +56,13 @@
         <div class="container">
             {%for i in plants%}
                 <p> {{i.plant_name}} </p>
-                {{i.plant_pic.url}}
+                {% comment %} {{i.plant_pic.url}} {% endcomment %}
                 <img src="{{i.plant_pic.url}}">
+                {{i.season}} <br>
+                {{i.soil}} <br>
+                {{i.location}} <br>
+                {{i.cost}} <br>
+                <br> <br> <br>
             {% endfor %}
 
             {% comment %} <a href="" class="item">{% load static %}<img src="" alt="">e-1</a>

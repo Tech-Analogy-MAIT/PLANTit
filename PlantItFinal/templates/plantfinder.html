@@ -60,13 +60,14 @@
         <h1>Evergreen Plants</h1> <strong>grow all year</strong> 
         <div class="container">
             {%for i in plants%}
-                <p> {{i.plant_name}} </p> <br>
+                <p> {{i.plant_name}} </p> <br> <br>
                 {% comment %} {{i.plant_pic.url}} {% endcomment %}
-                <img src="{{i.plant_pic.url}}">
+                <img src="{{i.plant_pic.url}}"> <br> <br>
                 {{i.season}} <br>
                 {{i.soil}} <br>
                 {{i.location}} <br>
                 {{i.cost}} <br>
+                <br> <br> <br>
             {% endfor %}
             {% comment %} <a href="" class="item">{% load static %}<img src="" alt="">e-1</a> {% endcomment %}
             
